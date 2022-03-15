@@ -70,11 +70,13 @@ const displayCountries = countries =>{
 
 }
 
-const getCountryHtml =country=>{
+const getCountryHtml = ({name,flags,area,continents}) =>{
     return `
     <div>
-    <h2>${country.name.common}</h2>
-    <img src="${country.flags.png}">
+    <h2>${name.common}</h2>
+    <p>Area: ${area}</p>
+    <p>Continent: ${continents}</p>
+    <img src="${flags.png}">
     </div>
     `
 }
